@@ -3,7 +3,6 @@ import json
 from pathlib import Path
 from typing import List
 import pandas as pd
-from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
