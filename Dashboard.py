@@ -11,7 +11,5 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded")
 
-alt.themes.enable("dark")
-
 df_reshaped = pd.read_csv('COPD-PM2_5.csv')
 
