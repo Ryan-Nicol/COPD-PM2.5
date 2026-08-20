@@ -2,8 +2,6 @@ from datetime import datetime as dt
 import json
 from pathlib import Path
 from typing import List
-import statsmodels.formula.api as smf
-import statsmodels.api as sm
 import pandas as pd
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 import plotly.express as px
