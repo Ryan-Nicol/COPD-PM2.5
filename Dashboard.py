@@ -31,4 +31,12 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
-st.set_page_config
+st.set_page_config(
+    page_title="PM2.5 and hospitalisations in Chiang Mai",
+    layout="wide",
+    initial_sidebar_state="expanded")
+
+alt.themes.enable("dark")
+
+df_reshaped = pd.read_csv('COPD-PM2_5.csv')
+
