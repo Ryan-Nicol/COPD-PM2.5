@@ -10,7 +10,7 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded")
 
-copd = pd.read_csv('COPD-PM2_5.csv')
+copd = pd.read_csv('COPD-PM2_5.csv', sep='comma')
 copd
 
 st.write("### 5. Scatter Chart")
