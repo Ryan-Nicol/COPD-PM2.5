@@ -15,6 +15,6 @@ copd = pd.read_csv('COPD-PM2_5.csv')
 
 st.write("### 5. Scatter Chart")
 st.scatter_chart(copd,
-                 x='date',
+                 x="date",
                  y='count',
                  color='pm2_5')
