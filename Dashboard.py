@@ -10,5 +10,11 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded")
 
-df_reshaped = pd.read_csv('COPD-PM2_5.csv')
+copd = pd.read_csv('COPD-PM2_5.csv')
 
+
+st.write("### 5. Scatter Chart")
+st.scatter_chart(copd,
+                 x='date',
+                 y='count',
+                 color='pm2_5')
