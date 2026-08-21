@@ -11,7 +11,7 @@ st.set_page_config(
     initial_sidebar_state="expanded")
 
 copd = pd.read_csv('COPD-PM2_5.csv', sep='comma')
-copd
+copd = copd.applymap(lambda x: x.replace('"',))
 
 st.write("### 5. Scatter Chart")
 st.scatter_chart(copd,
