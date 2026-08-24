@@ -10,7 +10,7 @@ st.set_page_config(
     page_title="PM2.5 and hospitalisations in Chiang Mai",
     layout="wide",
     initial_sidebar_state="expanded")
-
+st.write(page_title)
 
 
 st.write("### 5. Scatter Chart")
