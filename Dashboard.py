@@ -10,16 +10,9 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded")
 
-copd = pd.read_csv('COPD-PM2_5.csv', sep='comma')
+copd = pd.read_csv('Full_data.xlsx', sep='comma')
 
 st.write("### 5. Scatter Chart")
-from numpy.random import default_rng as rng
-
-df = pd.DataFrame(rng(0).standard_normal((20, 3)), columns=["a", "b", "c"])
-
-st.bar_chart(df)
-
-
 st.scatter_chart(copd,
                  x='date',
                  y='count',
