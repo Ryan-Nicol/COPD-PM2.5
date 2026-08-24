@@ -1,4 +1,4 @@
-pip install plotly
+pip import plotly
 from datetime import datetime as dt
 import json
 from pathlib import Path
