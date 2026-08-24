@@ -11,10 +11,8 @@ st.set_page_config(
     initial_sidebar_state="expanded")
 
 copd = pd.read_csv('COPD-PM2_5.csv', sep='comma')
-copd = copd.applymap(lambda x: x.replace('"',))
 
 import plotly.figure_factory as ff
-import streamlit as st
 from numpy.random import default_rng as rng
 
 hist_data = [
