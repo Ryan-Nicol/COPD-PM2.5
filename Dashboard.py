@@ -21,4 +21,14 @@ st.bar_chart(copd,
                  x="pm2_5",
                  y='count',
                  color='pm2_5')
+
+selected = st.selectbox(
+    "Select a variable",
+    options=['pm2_5_val', 'pm10', 'count'],
+    index=1
+)
+st.scatter_chart(copd,
+                 x={selected},
+                 y='count',
+                 color='blue')
 copd
