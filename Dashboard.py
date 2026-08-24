@@ -13,6 +13,11 @@ st.set_page_config(
 copd = pd.read_csv('COPD-PM2_5.csv', sep='comma')
 
 st.write("### 5. Scatter Chart")
+fig = go.Figure()
+fig.add_trace(
+    go.Scatter(
+        x=[1, 2, 3, 4, 5],
+        y=[1, 3, 2, 5, 4]))
 st.scatter_chart(copd,
                  x='date',
                  y='count',
