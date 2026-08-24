@@ -18,3 +18,8 @@ st.scatter_chart(copd,
                  x="date",
                  y='count',
                  color='pm2_5')
+
+st.bar_chart(copd,
+                 x="pm2_5",
+                 y='count',
+                 color='pm2_5')
