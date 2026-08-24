@@ -12,7 +12,6 @@ st.set_page_config(
 
 copd = pd.read_csv('COPD-PM2_5.csv', sep='comma')
 
-import plotly.figure_factory as ff
 from numpy.random import default_rng as rng
 
 hist_data = [
