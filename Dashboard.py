@@ -14,40 +14,39 @@ st.set_page_config(
     initial_sidebar_state="expanded")
 st.write("# PM2.5 and hospitalisations in Chiang Mai")
 
-with st.container():
-    st.scatter_chart(copd,
+st.scatter_chart(copd,
                  x="date",
                  y='count',
                  color='pm2_5')
-    st.bar_chart(copd,
+st.bar_chart(copd,
                  x="pm2_5",
                  y='count',
                  color='pm2_5')
-    selected = st.selectbox(
+selected = st.selectbox(
         "Select a variable",
         options=['pm2_5_val', 'pm10', 'tempF'],
         index=1
     )
-    st.scatter_chart(copd,
+st.scatter_chart(copd,
                  y=selected,
                  x='date',
                  color='blue')
-    selected2 = st.selectbox(
+selected2 = st.selectbox(
         "Select a variable",
         options=['humidity', 'tempF','ozone'],
         index=1
     )
-    st.scatter_chart(copd,
+st.scatter_chart(copd,
                  x=selected2,
                  y='count',
                  color='blue')
-    selectedf = st.selectbox(
+selectedf = st.selectbox(
         "Select a variable",
         options=['pm10', 'pm2_5_y','carbon_monoxide','carbon_dioxide',
                                 'nitrogen_dioxide','sulphur_dioxide','ozone','count'],
         index=1
     )
-    st.scatter_chart(copd_f,
+st.scatter_chart(copd_f,
                  y=selectedf,
                  x='date',
                  color='blue')
