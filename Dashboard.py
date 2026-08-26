@@ -29,6 +29,6 @@ selected = st.selectbox(
     index=1
 )
 st.scatter_chart(copd,
-                 x=selected,
-                 y='date',
+                 y=selected,
+                 x='date',
                  color='blue')
