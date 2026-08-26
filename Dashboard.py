@@ -25,7 +25,7 @@ col2.bar_chart(copd,
                  y='count',
                  color='pm2_5')
 selected = st.selectbox(
-        "Select a variable",
+        "Select a variable for x axis date",
         options=['pm2_5_val', 'pm10', 'tempF'],
         index=1
     )
@@ -34,7 +34,7 @@ col1.scatter_chart(copd,
                  x='date',
                  color='blue')
 selected2 = st.selectbox(
-        "Select a variable",
+        "Select a variable for y axis count",
         options=['humidity', 'tempF','ozone'],
         index=1
     )
@@ -43,7 +43,7 @@ col2.scatter_chart(copd,
                  y='count',
                  color='blue')
 selectedf = st.selectbox(
-        "Select a variable",
+        "Select a variable for forecasted data",
         options=['pm10', 'pm2_5_y','carbon_monoxide','carbon_dioxide',
                                 'nitrogen_dioxide','sulphur_dioxide','ozone','count'],
         index=1
