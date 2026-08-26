@@ -51,6 +51,6 @@ selectedf = st.selectbox(
     index=1
 )
 st.scatter_chart(copd_f,
-                 x=selectedf,
-                 y='date',
+                 y=selectedf,
+                 x='date',
                  color='blue')
