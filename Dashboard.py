@@ -32,24 +32,22 @@ with st.container():
                  y=selected,
                  x='date',
                  color='blue')
-
-selected2 = st.selectbox(
-    "Select a variable",
-    options=['humidity', 'tempF','ozone'],
-    index=1
-)
-st.scatter_chart(copd,
+    selected2 = st.selectbox(
+        "Select a variable",
+        options=['humidity', 'tempF','ozone'],
+        index=1
+    )
+    st.scatter_chart(copd,
                  x=selected2,
                  y='count',
                  color='blue')
-
-selectedf = st.selectbox(
-    "Select a variable",
-    options=['pm10', 'pm2_5_y','carbon_monoxide','carbon_dioxide',
+    selectedf = st.selectbox(
+        "Select a variable",
+        options=['pm10', 'pm2_5_y','carbon_monoxide','carbon_dioxide',
                                 'nitrogen_dioxide','sulphur_dioxide','ozone','count'],
-    index=1
-)
-st.scatter_chart(copd_f,
+        index=1
+    )
+    st.scatter_chart(copd_f,
                  y=selectedf,
                  x='date',
                  color='blue')
