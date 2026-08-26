@@ -25,7 +25,7 @@ st.bar_chart(copd,
 
 selected = st.selectbox(
     "Select a variable",
-    options=['pm2_5_val', 'pm10', 'TempF'],
+    options=['pm2_5_val', 'pm10', 'tempF'],
     index=1
 )
 st.scatter_chart(copd,
