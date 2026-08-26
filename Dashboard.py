@@ -6,7 +6,7 @@ import pandas as pd
 import streamlit as st
 
 copd = pd.read_csv('COPD_PM2.5.csv', sep=',')
-copd['date'] = pd.to_datetime(copd['date'])
+copd['date'] = pd.to_datetime(copd['date'], yearfirst=True)
 copd.date.apply(lambda x: x.strftime('%Y%m%d')).astype(int)
 
 st.set_page_config(
