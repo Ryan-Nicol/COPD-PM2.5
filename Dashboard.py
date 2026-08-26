@@ -5,7 +5,7 @@ from typing import List
 import pandas as pd
 import streamlit as st
 
-copd = pd.read_csv('COPD_PM2_5.csv', sep=',')
+copd = pd.read_csv('COPD_PM2.5.csv', sep=',')
 st.set_page_config(
     page_title="PM2.5 and hospitalisations in Chiang Mai",
     layout="wide",
