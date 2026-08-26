@@ -32,3 +32,13 @@ st.scatter_chart(copd,
                  y=selected,
                  x='date',
                  color='blue')
+
+selected2 = st.selectbox(
+    "Select a variable",
+    options=['humidity', 'tempF','ozone'],
+    index=1
+)
+st.scatter_chart(copd,
+                 y=selected,
+                 x='count',
+                 color='blue')
