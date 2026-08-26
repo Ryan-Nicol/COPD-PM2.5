@@ -14,7 +14,9 @@ st.set_page_config(
     initial_sidebar_state="expanded")
 st.write("# PM2.5 and hospitalisations in Chiang Mai")
 
-st.scatter_chart(copd,
+col1, col2 = st.columns([3,3])
+
+col1.scatter_chart(copd,
                  x="date",
                  y='count',
                  color='pm2_5')
