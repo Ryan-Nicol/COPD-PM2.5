@@ -20,7 +20,7 @@ col1.scatter_chart(copd,
                  x="date",
                  y='count',
                  color='pm2_5')
-st.bar_chart(copd,
+col2.bar_chart(copd,
                  x="pm2_5",
                  y='count',
                  color='pm2_5')
@@ -29,7 +29,7 @@ selected = st.selectbox(
         options=['pm2_5_val', 'pm10', 'tempF'],
         index=1
     )
-st.scatter_chart(copd,
+col1.scatter_chart(copd,
                  y=selected,
                  x='date',
                  color='blue')
@@ -38,7 +38,7 @@ selected2 = st.selectbox(
         options=['humidity', 'tempF','ozone'],
         index=1
     )
-st.scatter_chart(copd,
+col2.scatter_chart(copd,
                  x=selected2,
                  y='count',
                  color='blue')
@@ -48,7 +48,7 @@ selectedf = st.selectbox(
                                 'nitrogen_dioxide','sulphur_dioxide','ozone','count'],
         index=1
     )
-st.scatter_chart(copd_f,
+col1.scatter_chart(copd_f,
                  y=selectedf,
                  x='date',
                  color='blue')
