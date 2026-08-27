@@ -12,6 +12,7 @@ st.write("# PM2.5 and hospitalisations in Chiang Mai")
 st.markdown(''' :red[very low = 1-15ppm], :blue[low = 15.1-25ppm], :red[moderate = 25.1-37.5ppm],
             :blue[high = 37.6-75ppm], :green[very unsafe = 75.1-150ppm]''')
 
+st.write("##### The number of historical and forecasted hospitalisations between 2023-2025 and the next 6 days, coloured by PM2.5 level")
 st.line_chart(copd,
                  x="date",
                  y='count',
