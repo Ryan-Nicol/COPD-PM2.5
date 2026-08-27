@@ -50,6 +50,7 @@ col3.bar_chart(copd,
                y_label='Count',
                  color='pm2_5')
 
+col4.write("##### Interaction between both types of PM and the hospitalisation count")
 selected = col4.selectbox(
         "Select a variable for the x axis",
         options=['pm2_5_val', 'pm10'],
@@ -60,9 +61,11 @@ col4.scatter_chart(copd,
                  y='count',
                    y_label='Count',
                  color='violet')
+
+col3.write("##### Interaction between other environmental factors and the hospitalisation count")
 selected2 = col3.selectbox(
         "Select a variable for the x axis",
-        options=['humidity', 'tempF','ozone'],
+        options=['humidity', 'tempF','ozone','carbon_monoxide','carbon_dioxide','sulphur_dioxide','nitrogen_dioxide'],
         index=1
     )
 col3.scatter_chart(copd,
