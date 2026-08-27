@@ -9,7 +9,7 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded")
 st.write("# PM2.5 and hospitalisations in Chiang Mai")
-st.markdown(''' :light-red[very low = 1-15ppm], :light-blue[low = 15.1-25ppm], :red[moderate = 25.1-37.5ppm],
+st.markdown(''' :light_red[very low = 1-15ppm], :light_blue[low = 15.1-25ppm], :red[moderate = 25.1-37.5ppm],
             :blue[high = 37.6-75ppm], :green[very unsafe = 75.1-150ppm]''')
 
 col1, col2 = st.columns([3,3])
