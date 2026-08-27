@@ -9,7 +9,7 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded")
 st.write("# PM2.5 and hospitalisations in Chiang Mai")
-st.markdown(''' :yellow[very low = 1-15ppm], :violet[low = 15.1-25ppm], :red[moderate = 25.1-37.5ppm],
+st.markdown(''' :red[very low = 1-15ppm], :blue[low = 15.1-25ppm], :red[moderate = 25.1-37.5ppm],
             :blue[high = 37.6-75ppm], :green[very unsafe = 75.1-150ppm]''')
 
 col1, col2 = st.columns([3,3])
@@ -17,12 +17,12 @@ col1, col2 = st.columns([3,3])
 col1.line_chart(copd_f,
                  y='count',
                  x='date',
-                 color='blue')
+                 color='violet')
 
 col2.line_chart(copd_f,
                  y='pm2_5_y',
                  x='date',
-                 color='blue')
+                 color='violet')
 
 col1.line_chart(copd,
                  x="date",
@@ -40,7 +40,7 @@ selected = col1.selectbox(
 col1.scatter_chart(copd,
                  x=selected,
                  y='count',
-                 color='blue')
+                 color='violet')
 selected2 = col2.selectbox(
         "Select a variable for the x axis",
         options=['humidity', 'tempF','ozone'],
@@ -49,5 +49,5 @@ selected2 = col2.selectbox(
 col2.scatter_chart(copd,
                  x=selected2,
                  y='count',
-                 color='blue')
+                 color='violet')
 
