@@ -45,7 +45,7 @@ col3, col4 = st.columns([2,2])
 col3.write("##### The total number of historical and forecasted hospitalisations sorted by PM2.5 level")
 col3.bar_chart(copd,
                  x="pm2_5",
-               x_label='PM2.5 Categories'
+               x_label='PM2.5 Categories',
                  y='count',
                y_label='Count',
                  color='pm2_5')
