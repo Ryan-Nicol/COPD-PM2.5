@@ -42,14 +42,6 @@ st.line_chart(copd,
 
 col3, col4 = st.columns([2,2])
 
-col3.write("##### The total number of historical and forecasted hospitalisations sorted by PM2.5 level")
-col3.bar_chart(copd,
-                 x="pm2_5",
-               x_label='PM2.5 Categories',
-                 y='count',
-               y_label='Count',
-                 color='pm2_5')
-
 col4.write("##### Interaction between both types of PM and the hospitalisation count")
 selected = col4.selectbox(
         "Select a variable for the x axis",
@@ -73,4 +65,12 @@ col3.scatter_chart(copd,
                  y='count',
                    y_label='Count',
                  color='violet')
+
+col3.write("##### The total number of historical and forecasted hospitalisations sorted by PM2.5 level")
+col3.bar_chart(copd,
+                 x="pm2_5",
+               x_label='PM2.5 Categories',
+                 y='count',
+               y_label='Count',
+                 color='pm2_5')
 
