@@ -12,7 +12,7 @@ st.write("# PM2.5 and hospitalisations in Chiang Mai")
 st.markdown(''' :red[very low = 1-15ppm], :blue[low = 15.1-25ppm], :red[moderate = 25.1-37.5ppm],
             :blue[high = 37.6-75ppm], :green[very unsafe = 75.1-150ppm]''')
 
-copd[18]
+copd[]
 
 col1, col2 = st.columns([3,3])
 
