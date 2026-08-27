@@ -12,6 +12,12 @@ st.write("# PM2.5 and hospitalisations in Chiang Mai")
 st.markdown(''' :red[very low = 1-15ppm], :blue[low = 15.1-25ppm], :red[moderate = 25.1-37.5ppm],
             :blue[high = 37.6-75ppm], :green[very unsafe = 75.1-150ppm]''')
 
+st.line_chart(copd,
+                 x="date",
+                 y='count',
+                 color= 'pm2_5',
+               width= 'stretch')
+
 col1, col2 = st.columns([3,3])
 
 col1.write("##### The number of forecasted hospitalisations over the next 6 days")
@@ -27,11 +33,6 @@ col2.line_chart(copd_f,
                  x='date',
                  color='violet')
 
-col1.line_chart(copd,
-                 x="date",
-                 y='count',
-                 color= 'pm2_5',
-               width= int(10000))
 col2.bar_chart(copd,
                  x="pm2_5",
                  y='count',
