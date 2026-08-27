@@ -27,7 +27,7 @@ col2.line_chart(copd_f,
 col1.line_chart(copd,
                  x="date",
                  y='count',
-                 color=['yellow','violet','red','blue','green'])
+                 color= 'pm2_5')
 col2.bar_chart(copd,
                  x="pm2_5",
                  y='count',
