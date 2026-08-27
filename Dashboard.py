@@ -18,7 +18,9 @@ col1, col2 = st.columns([1,1])
 col1.write("##### The number of forecasted hospitalisations over the next 6 days")
 col1.line_chart(copd_f,
                  y='count',
+                y_label='Count',
                  x='date',
+                x_label='Date',
                  color='violet')
 
 col2.write("##### The forecasted PM2.5 levels over the next 6 days")
@@ -26,20 +28,28 @@ col2.line_chart(copd_f,
                  y='pm2_5_y',
                 y_label = 'PM2.5 levels',
                  x='date',
+                x_label='Date',
                  color='violet')
 
 st.write("##### The number of historical and forecasted hospitalisations between 2023-2025 and the next 6 days, coloured by PM2.5 level")
 st.line_chart(copd,
                  x="date",
+               x_label='Date',
                  y='count',
+              y_label='Count',
                  color= 'pm2_5',
                width= 'stretch')
 
 col3, col4 = st.columns([2,2])
+
+col3.write("##### The total number of historical and forecasted hospitalisations sorted by PM2.5 level")
 col3.bar_chart(copd,
                  x="pm2_5",
+               x_label='PM2.5 Categories'
                  y='count',
+               y_label='Count',
                  color='pm2_5')
+
 selected = col4.selectbox(
         "Select a variable for the x axis",
         options=['pm2_5_val', 'pm10'],
@@ -48,6 +58,7 @@ selected = col4.selectbox(
 col4.scatter_chart(copd,
                  x=selected,
                  y='count',
+                   y_label='Count',
                  color='violet')
 selected2 = col3.selectbox(
         "Select a variable for the x axis",
@@ -57,5 +68,6 @@ selected2 = col3.selectbox(
 col3.scatter_chart(copd,
                  x=selected2,
                  y='count',
+                   y_label='Count',
                  color='violet')
 
