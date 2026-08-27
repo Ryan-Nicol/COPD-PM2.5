@@ -12,7 +12,7 @@ st.write("# PM2.5 and hospitalisations in Chiang Mai")
 
 col1, col2 = st.columns([3,3])
 
-col1.scatter_chart(copd,
+col1.line_chart(copd,
                  x="date",
                  y='count',
                  color='pm2_5')
@@ -44,7 +44,7 @@ selectedf = st.selectbox(
                                 'nitrogen_dioxide','sulphur_dioxide','ozone','count'],
         index=1
     )
-col1.scatter_chart(copd_f,
+col1.line_chart(copd_f,
                  y=selectedf,
                  x='date',
                  color='blue')
