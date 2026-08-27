@@ -13,7 +13,7 @@ st.markdown(''' :red[very low = 1-15ppm], :blue[low = 15.1-25ppm], :red[moderate
             :blue[high = 37.6-75ppm], :green[very unsafe = 75.1-150ppm]''')
 
 
-col1, col2 = st.columns([3,3])
+col1, col2 = st.columns([1,1])
 
 col1.write("##### The number of forecasted hospitalisations over the next 6 days")
 col1.line_chart(copd_f,
@@ -35,26 +35,26 @@ st.line_chart(copd,
                  color= 'pm2_5',
                width= 'stretch')
 
-
-col2.bar_chart(copd,
+col3, col4 = st.columns([2,2])
+col3.bar_chart(copd,
                  x="pm2_5",
                  y='count',
                  color='pm2_5')
-selected = col1.selectbox(
+selected = col4.selectbox(
         "Select a variable for the x axis",
         options=['pm2_5_val', 'pm10'],
         index=1
     )
-col1.scatter_chart(copd,
+col4.scatter_chart(copd,
                  x=selected,
                  y='count',
                  color='violet')
-selected2 = col2.selectbox(
+selected2 = col3.selectbox(
         "Select a variable for the x axis",
         options=['humidity', 'tempF','ozone'],
         index=1
     )
-col2.scatter_chart(copd,
+col3.scatter_chart(copd,
                  x=selected2,
                  y='count',
                  color='violet')
