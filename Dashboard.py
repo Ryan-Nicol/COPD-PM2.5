@@ -20,8 +20,10 @@ col1.line_chart(copd_f,
                  x='date',
                  color='violet')
 
+col2.write("##### The forecasted PM2.5 levels over the next 6 days")
 col2.line_chart(copd_f,
                  y='pm2_5_y',
+                y_label = 'PM2.5 levels',
                  x='date',
                  color='violet')
 
