@@ -31,7 +31,7 @@ col1.line_chart(copd,
                  x="date",
                  y='count',
                  color= 'pm2_5',
-               width= 150000)
+               width= 'content')
 col2.bar_chart(copd,
                  x="pm2_5",
                  y='count',
