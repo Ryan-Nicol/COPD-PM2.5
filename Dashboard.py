@@ -1,6 +1,5 @@
 import pandas as pd
 import streamlit as st
-import matplotlib as plt
 
 copd = pd.read_csv('COPD_PM2.5.csv', sep=',', parse_dates=[11], date_format="%Y/%m/%d")
 copd_f = pd.read_csv('COPD_PM2.5_F.csv', sep=',', parse_dates=[9], date_format="%Y/%m/%d")
