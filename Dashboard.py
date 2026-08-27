@@ -14,6 +14,7 @@ st.markdown(''' :red[very low = 1-15ppm], :blue[low = 15.1-25ppm], :red[moderate
 
 col1, col2 = st.columns([3,3])
 
+col1.write("##### The number of forecasted hospitalisations over the next 6 days")
 col1.line_chart(copd_f,
                  y='count',
                  x='date',
