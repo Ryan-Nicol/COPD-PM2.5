@@ -46,7 +46,7 @@ col4.write("##### Interaction between both types of PM and the hospitalisation c
 selected = col4.selectbox(
         "Select a variable for the x axis",
         options=['pm2_5_val', 'pm10'],
-        index=1
+        index=0
     )
 col4.scatter_chart(copd,
                  x=selected,
@@ -57,8 +57,8 @@ col4.scatter_chart(copd,
 col3.write("##### Interaction between other environmental factors and the hospitalisation count")
 selected2 = col3.selectbox(
         "Select a variable for the x axis",
-        options=['humidity', 'tempF','ozone','carbon_monoxide','carbon_dioxide','sulphur_dioxide','nitrogen_dioxide'],
-        index=1
+        options=['tempF','humidity','ozone','carbon_monoxide','carbon_dioxide','sulphur_dioxide','nitrogen_dioxide'],
+        index=0
     )
 col3.scatter_chart(copd,
                  x=selected2,
