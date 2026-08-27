@@ -30,7 +30,7 @@ col2.bar_chart(copd,
                  x="pm2_5",
                  y='count',
                  color='pm2_5')
-selected = st.selectbox(
+selected = col1.selectbox(
         "Select a variable for x axis date",
         options=['pm2_5_val', 'pm10', 'tempF'],
         index=1
@@ -39,7 +39,7 @@ col1.scatter_chart(copd,
                  y=selected,
                  x='date',
                  color='blue')
-selected2 = st.selectbox(
+selected2 = col2.selectbox(
         "Select a variable for y axis count",
         options=['humidity', 'tempF','ozone'],
         index=1
