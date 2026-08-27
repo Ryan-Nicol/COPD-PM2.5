@@ -9,6 +9,7 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded")
 st.write("# PM2.5 and hospitalisations in Chiang Mai")
+st.write("### very low = 1-15ppm, low = 15.1-25ppm, moderate = 25.1-37.5ppm, high = 37.6-75ppm, very unsafe = 75.1-150ppm")
 
 col1, col2 = st.columns([3,3])
 
