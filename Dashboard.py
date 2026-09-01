@@ -39,8 +39,6 @@ st.scatter_chart(copd,
 st.markdown(''' :red[very low = 1-15ppm], :blue[low = 15.1-25ppm], :red[moderate = 25.1-37.5ppm],
             :blue[high = 37.6-75ppm], :green[very unsafe = 75.1-150ppm]''')
 
-col3, col4 = st.columns([2,2])
-
 col2.write("##### Interaction between both types of PM and the hospitalisation count")
 selected = col2.selectbox(
         "Select a variable for the x axis",
