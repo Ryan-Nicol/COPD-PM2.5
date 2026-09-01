@@ -30,7 +30,7 @@ col2.line_chart(copd_f,
                 x_label='Date',
                  color='violet')
 
-fig = go.Figure([go.Scatter(copd, x='date', y='count')])
+fig = go.Figure([go.Scatter(x=copd['date'], y=copd['count'])])
 
 fig.update_xaxes(nticks=5)
 
