@@ -32,7 +32,7 @@ col2.line_chart(copd_f,
                  color='violet')
 
 st.write("##### The number of historical and forecasted hospitalisations between 2023-2025 and the next 6 days, coloured by PM2.5 level")
-st.line_chart(copd,
+st.scatter(copd,
                  x="date",
                x_label='Date',
                  y='count',
@@ -54,6 +54,14 @@ col4.scatter_chart(copd,
                    y_label='Count',
                  color='violet')
 
+col3.write("##### The total number of historical and forecasted hospitalisations sorted by PM2.5 level")
+col3.bar_chart(copd,
+                 x="pm2_5",
+               x_label='PM2.5 Categories',
+                 y='count',
+               y_label='Count',
+                 color='pm2_5')
+
 col3.write("##### Interaction between other environmental factors and the hospitalisation count")
 selected2 = col3.selectbox(
         "Select a variable for the x axis",
@@ -66,11 +74,5 @@ col3.scatter_chart(copd,
                    y_label='Count',
                  color='violet')
 
-col3.write("##### The total number of historical and forecasted hospitalisations sorted by PM2.5 level")
-col3.bar_chart(copd,
-                 x="pm2_5",
-               x_label='PM2.5 Categories',
-                 y='count',
-               y_label='Count',
-                 color='pm2_5')
+
 
