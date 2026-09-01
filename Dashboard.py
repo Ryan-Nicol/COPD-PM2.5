@@ -63,13 +63,13 @@ col3.bar_chart(copd[0:1095],
 col3.markdown(''' :red[very low = 1-15ppm], :blue[low = 15.1-25ppm], :red[moderate = 25.1-37.5ppm],
             :blue[high = 37.6-75ppm], :green[very unsafe = 75.1-150ppm]''')
 
-col3.write("##### Interaction between other environmental factors and the hospitalisation count")
-selected2 = col3.selectbox(
+col4.write("##### Interaction between other environmental factors and the hospitalisation count")
+selected2 = col4.selectbox(
         "Select a variable for the x axis",
         options=['tempF','humidity','ozone','carbon_monoxide','carbon_dioxide','sulphur_dioxide','nitrogen_dioxide'],
         index=0
     )
-col3.scatter_chart(copd,
+col4.scatter_chart(copd,
                  x=selected2,
                  y='count',
                    y_label='Hospitalisation Count',
