@@ -1,5 +1,6 @@
 import pandas as pd
 import streamlit as st
+import plotly.graph_objects as go
 
 copd = pd.read_csv('COPD-PM2_5_processed.csv', sep=',', parse_dates=[11], date_format="%Y/%m/%d")
 copd_f = pd.read_csv('COPD-PM2_5_F_processed.csv', sep=',', parse_dates=[0], date_format="%Y/%m/%d")
@@ -33,7 +34,6 @@ st.write("##### The number of historical and forecasted hospitalisations between
 st.scatter_chart(copd,
                  x="date",
                x_label='Date',
-                 x_ticks=6,
                  y='count',
               y_label='Hospitalisation Count',
                  color= 'pm2_5',
