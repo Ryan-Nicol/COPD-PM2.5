@@ -38,6 +38,7 @@ st.scatter_chart(copd,
                  y='count',
               y_label='Count',
                  color= 'pm2_5',
+                 color_discrete_sequence=[:red, :red, :blue, :blue, :green],
                width= 'stretch')
 
 col3, col4 = st.columns([2,2])
