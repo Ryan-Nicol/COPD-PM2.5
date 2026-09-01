@@ -30,6 +30,12 @@ col2.line_chart(copd_f,
                 x_label='Date',
                  color='violet')
 
+fig = go.Figure([go.Scatter(copd, x='date', y='count')])
+
+fig.update_xaxes(nticks=5)
+
+fig.show()
+
 st.write("##### The number of historical and forecasted hospitalisations between 2023-2025 and the next 6 days, coloured by PM2.5 level")
 st.scatter_chart(copd,
                  x="date",
