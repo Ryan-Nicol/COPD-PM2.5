@@ -55,7 +55,7 @@ col4.scatter_chart(copd,
                  color='violet')
 
 col3.write("##### The total number of historical and forecasted hospitalisations sorted by PM2.5 level")
-col3.bar_chart(copd[0:1096],
+col3.bar_chart(copd[0:1095],
                  x="pm2_5",
                x_label='PM2.5 Categories',
                  y='count',
