@@ -16,7 +16,7 @@ col1, col2 = st.columns([1,1])
 col1.write("##### The number of forecasted hospitalisations over the next 6 days")
 col1.line_chart(copd_f,
                  y='count',
-                y_label='Count',
+                y_label='Hospitalisation Count',
                  x='date',
                 x_label='Date',
                  color='violet')
@@ -34,7 +34,7 @@ st.scatter_chart(copd,
                  x="date",
                x_label='Date',
                  y='count',
-              y_label='Count',
+              y_label='Hospitalisation Count',
                  color= 'pm2_5',
                width= 'stretch')
 st.markdown(''' :red[very low = 1-15ppm], :blue[low = 15.1-25ppm], :red[moderate = 25.1-37.5ppm],
@@ -51,7 +51,7 @@ selected = col4.selectbox(
 col4.scatter_chart(copd,
                  x=selected,
                  y='count',
-                   y_label='Count',
+                   y_label='Hospitalisation Count',
                  color='violet')
 
 col3.write("##### The total number of historical hospitalisations sorted by PM2.5 level")
@@ -59,7 +59,7 @@ col3.bar_chart(copd[0:1095],
                  x="pm2_5",
                x_label='PM2.5 Categories',
                  y='count',
-               y_label='Count',
+               y_label='Hospitalisation Count',
                  color='pm2_5')
 col3.markdown(''' :red[very low = 1-15ppm], :blue[low = 15.1-25ppm], :red[moderate = 25.1-37.5ppm],
             :blue[high = 37.6-75ppm], :green[very unsafe = 75.1-150ppm]''')
@@ -73,7 +73,7 @@ selected2 = col3.selectbox(
 col3.scatter_chart(copd,
                  x=selected2,
                  y='count',
-                   y_label='Count',
+                   y_label='Hospitalisation Count',
                  color='violet')
 
 
