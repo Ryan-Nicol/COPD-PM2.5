@@ -41,35 +41,35 @@ st.markdown(''' :red[very low = 1-15ppm], :blue[low = 15.1-25ppm], :red[moderate
 
 col3, col4 = st.columns([2,2])
 
-col4.write("##### Interaction between both types of PM and the hospitalisation count")
-selected = col4.selectbox(
+col2.write("##### Interaction between both types of PM and the hospitalisation count")
+selected = col2.selectbox(
         "Select a variable for the x axis",
         options=['pm2_5_val', 'pm10'],
         index=0
     )
-col4.scatter_chart(copd,
+col2.scatter_chart(copd,
                  x=selected,
                  y='count',
                    y_label='Hospitalisation Count',
                  color='violet')
 
-col3.write("##### The total number of historical hospitalisations sorted by PM2.5 level")
-col3.bar_chart(copd[0:1095],
+col1.write("##### The total number of historical hospitalisations sorted by PM2.5 level")
+col1.bar_chart(copd[0:1095],
                  x="pm2_5",
                x_label='PM2.5 Categories',
                  y='count',
                y_label='Hospitalisation Count',
                  color='pm2_5')
-col3.markdown(''' :red[very low = 1-15ppm], :blue[low = 15.1-25ppm], :red[moderate = 25.1-37.5ppm],
+col1.markdown(''' :red[very low = 1-15ppm], :blue[low = 15.1-25ppm], :red[moderate = 25.1-37.5ppm],
             :blue[high = 37.6-75ppm], :green[very unsafe = 75.1-150ppm]''')
 
-col3.write("##### Interaction between other environmental factors and the hospitalisation count")
-selected2 = col3.selectbox(
+col1.write("##### Interaction between other environmental factors and the hospitalisation count")
+selected2 = col1.selectbox(
         "Select a variable for the x axis",
         options=['tempF','humidity','ozone','carbon_monoxide','carbon_dioxide','sulphur_dioxide','nitrogen_dioxide'],
         index=0
     )
-col3.scatter_chart(copd,
+col1.scatter_chart(copd,
                  x=selected2,
                  y='count',
                    y_label='Hospitalisation Count',
