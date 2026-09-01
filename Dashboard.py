@@ -33,6 +33,7 @@ st.write("##### The number of historical and forecasted hospitalisations between
 st.scatter_chart(copd,
                  x="date",
                x_label='Date',
+                 x_ticks=6,
                  y='count',
               y_label='Hospitalisation Count',
                  color= 'pm2_5',
