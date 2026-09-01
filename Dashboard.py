@@ -6,8 +6,7 @@ copd_f = pd.read_csv('COPD-PM2_5_F_processed.csv', sep=',', parse_dates=[0], dat
 
 st.set_page_config(
     page_title="PM2.5 and hospitalisations in Chiang Mai",
-    layout="wide",
-    initial_sidebar_state="expanded")
+    layout="wide")
 st.write("# PM2.5 and hospitalisations in Chiang Mai")
 
 
