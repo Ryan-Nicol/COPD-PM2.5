@@ -44,7 +44,7 @@ col3, col4 = st.columns([1,1])
 col4.write("##### Interaction between both types of PM and the hospitalisation count")
 selected = col4.selectbox(
         "Select a variable for the x axis",
-        options=['pm2_5_val', 'pm10'],
+        options=['pm2_5', 'pm10'],
         index=0
     )
 col4.scatter_chart(copd,
