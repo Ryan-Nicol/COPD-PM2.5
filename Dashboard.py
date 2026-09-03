@@ -34,7 +34,7 @@ st.scatter_chart(copd[0:1095],
                x_label='Date',
                  y='count',
               y_label='Hospitalisation Count',
-                 color= 'pm2_5',
+                 color= 'pm2_5_categories',
                width= 'stretch')
 
 st.markdown(''' :red[very low = 1-15ppm], :blue[low = 15.1-25ppm], :red[moderate = 25.1-37.5ppm],
