@@ -34,7 +34,8 @@ st.scatter_chart(copd,
                x_label='Date(2023-2026)',
                  y='count',
               y_label='Hospitalisation Count',
-                 color= 'pm2_5_categories')
+                 color= 'pm2_5_categories',
+               width= 'content')
 st.markdown(''' :red[very low = 1-15ppm], :blue[low = 15.1-25ppm], :red[moderate = 25.1-37.5ppm],
             :blue[high = 37.6-75ppm], :green[very unsafe = 75.1-150ppm]''')
 
