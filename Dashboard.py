@@ -30,7 +30,7 @@ col2.line_chart(copd_f,
 
 st.write("##### The number of historical and forecasted hospitalisations between 2023-2025 and the next 6 days, coloured by PM2.5 level")
 st.scatter_chart(copd,
-                 x="DIAGDATE",
+                 x="date",
                x_label='Date(2023-2026)',
                  y='count',
               y_label='Hospitalisation Count',
