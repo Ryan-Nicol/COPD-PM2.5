@@ -45,7 +45,7 @@ col3, col4 = st.columns([1,1])
 col4.write("##### Interaction between both types of PM and the hospitalisation count")
 selected = col4.selectbox(
         "Select a variable for the x axis",
-        options=['pm2_5_val', 'pm10'],
+        options=['pm2_5', 'pm10'],
         index=0
     )
 col4.scatter_chart(copd,
@@ -60,7 +60,7 @@ col3.bar_chart(copd[0:1095],
                x_label='PM2.5 Categories',
                  y='count',
                y_label='Hospitalisation Count',
-                 color='pm2_5')
+                 color='pm2_5_categories')
 col3.markdown(''' :red[very low = 1-15ppm], :blue[low = 15.1-25ppm], :red[moderate = 25.1-37.5ppm],
             :blue[high = 37.6-75ppm], :green[very unsafe = 75.1-150ppm]''')
 
