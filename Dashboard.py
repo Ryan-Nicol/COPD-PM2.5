@@ -29,21 +29,14 @@ col2.line_chart(copd_f,
                  color='violet')
 
 st.write("##### The number of historical and forecasted hospitalisations between 2023-2025 and the next 6 days, coloured by PM2.5 level")
-fig = st.scatter_chart(copd,
+st.scatter_chart(copd,
                  x="date",
                x_label='Date(2023-2026)',
                  y='count',
               y_label='Hospitalisation Count',
                  color= 'pm2_5_categories',
                width= 'stretch')
-fig.update_layout(
-    xaxis=dict(
-        rangeslider=dict(
-            visible=True
-        ),
-        type="linear"
-    )
-)
+
 st.markdown(''' :red[very low = 1-15ppm], :blue[low = 15.1-25ppm], :red[moderate = 25.1-37.5ppm],
             :blue[high = 37.6-75ppm], :green[very unsafe = 75.1-150ppm]''')
 
