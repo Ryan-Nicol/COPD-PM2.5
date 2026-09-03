@@ -34,7 +34,7 @@ st.scatter_chart(copd,
                x_label='Date(2023-2026)',
                  y='count',
               y_label='Hospitalisation Count',
-                 color= 'pm2_5',
+                 color= 'pm2_5_categories',
                width= 'stretch')
 st.markdown(''' :red[very low = 1-15ppm], :blue[low = 15.1-25ppm], :red[moderate = 25.1-37.5ppm],
             :blue[high = 37.6-75ppm], :green[very unsafe = 75.1-150ppm]''')
@@ -55,11 +55,11 @@ col4.scatter_chart(copd,
 
 col3.write("##### The total number of historical hospitalisations sorted by PM2.5 level")
 col3.bar_chart(copd[0:1095],
-                 x="pm2_5",
+                 x="pm2_5_categories",
                x_label='PM2.5 Categories',
                  y='count',
                y_label='Hospitalisation Count',
-                 color='pm2_5')
+                 color='pm2_5_categories')
 col3.markdown(''' :red[very low = 1-15ppm], :blue[low = 15.1-25ppm], :red[moderate = 25.1-37.5ppm],
             :blue[high = 37.6-75ppm], :green[very unsafe = 75.1-150ppm]''')
 
